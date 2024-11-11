@@ -14,15 +14,18 @@ body {
 h1{
     font-size: 1.1rem;
 }
-h2,
-h3,
-h4,
-h5,
-h6,
 label,
 span {
   font-weight: 500;
   font-family: "Fira Sans", sans-serif;
+}
+
+a{
+    text-decoration: none !important;
+    color: #7f7d7d !important;
+}
+a:hover {
+    color: rgba(17, 173, 234, 0.675) !important;
 }
 
 body,
@@ -68,9 +71,7 @@ html,
   padding-bottom: 20px;
 }
 
-
-
-.login-app .input-box {
+.login-app, .register-app .input-box {
     flex-direction: column;
     display: flex;
     margin-bottom: 8px;
@@ -82,6 +83,7 @@ html,
 }
 
 .input-box input {
+    padding: 12px;
     border-radius: 4px;
     border: 2px solid lightgray;
 }
@@ -91,31 +93,113 @@ input:focus {
 }
 
 .btn {
+    margin-top: 1.5rem;
     width: 100%;
-    background: green;
-    color: red;
+    background: green !important;
+    color: whitesmoke !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
 }
 
-.custom-control-label {
-  font-weight: 400;
+.register-app .links {
+    text-align: center !important;
 }
 
-.forgot-password,
-.forgot-password a {
-  text-align: right;
-  font-size: 13px;
-  padding-top: 10px;
-  color: #7f7d7d;
-  margin: 0;
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .75rem;
 }
 
-.forgot-password a {
-  color: #167bff;
+
+.login-app, .register-app .line {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #d4d4d4;
 }
-.continue-p{
-  font-size: 12px;
-    color: #b2b2b2;
-    font-weight: 600;
-    margin-top: 1rem;
-    text-align: center;
+.line::before {
+    content: 'Or';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFF;
+  color: #8b8b8b;
+  padding: 0 15px;
 }
+
+.icons {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+.icons .icon {
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+.icons .icon:hover {
+    transform: scale(1.4);
+}
+.icons .icon:nth-child(1) {
+    color: #1877F2;
+}
+.icons .icon:nth-child(2) {
+    color: #1DA1F2;
+}
+.icons .icon:nth-child(3) {
+    color: #d44638;
+}
+.icons .icon:nth-child(4) {
+    color: #24292e;
+}
+
+
+/* .icons {
+    position: relative;
+}
+
+.media-options a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    border-radius: 4px;
+    margin-top: 14px;
+}
+a.facebook {
+    color: #fff !important;
+    background-color: #4267b2;
+}
+
+.facebook-icon,
+img.google-img {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateX(-50%);
+}
+a.facebook .facebook-icon {
+    height: 28px;
+  width: 28px;
+  color: #0171d3;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+img.google-img {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+a.google {
+    border: 2px solid #CACACA;
+} */
+
