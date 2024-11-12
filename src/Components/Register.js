@@ -5,7 +5,9 @@ import { CgMail } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase";
+import { auth, db } from "../firebase";
+import { doc, setDoc } from "firebase/firestore";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -17,9 +19,22 @@ const Register = () => {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       const user = auth.currentUser;
+      if (user) {
+        await setDoc(doc(db, "Users", user.uid), {
+          email: user.email,
+          username: username,
+        });
+        console.log("user register successfully done");
+        toast.success("user Registered successfully", {
+          position: "top-center",
+        });
+      }
       console.log(user);
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
+      toast.error(error.message, {
+        position: "bottom-center",
+      });
     }
   };
   return (
