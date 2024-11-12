@@ -1,5 +1,5 @@
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Login from "./Components/Login";
+// import Login from "./Components/Login";
 import Register from "./Components/Register";
 
 // import { ToastContainer } from "react-toastify";
