@@ -9,6 +9,7 @@ body {
   display: flex;
   font-weight: 400;
   font-family: "Fira Sans", sans-serif;
+  overflow: hidden !important;
 }
 
 h1{
@@ -71,7 +72,7 @@ html,
   padding-bottom: 20px;
 }
 
-.login-app, .register-app .input-box {
+.login-app, .register-app, .input-box {
     flex-direction: column;
     display: flex;
     margin-bottom: 8px;
@@ -92,8 +93,14 @@ input:focus {
     outline: none;
 }
 
+.register-app,
+
 .btn {
     margin-top: 1.5rem;
+    padding: 8px 22px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
     width: 100%;
     background: green !important;
     color: whitesmoke !important;

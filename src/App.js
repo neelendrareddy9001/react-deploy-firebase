@@ -1,4 +1,4 @@
-// import Login from "./Components/Login";
+import Login from "./Components/Login";
 import Register from "./Components/Register";
 
 import { ToastContainer } from "react-toastify";
@@ -10,7 +10,7 @@ function App() {
       <div className="App">
         <div className="auth-wrapper">
           <div className="auth-inner">
-            <Register />
+            <Login />
             <ToastContainer />
           </div>
         </div>
