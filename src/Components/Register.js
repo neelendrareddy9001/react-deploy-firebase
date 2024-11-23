@@ -40,7 +40,7 @@ const Register = () => {
   return (
     <div>
       <h3>Register</h3>
-      <div className="register-app">
+      <div className="register-app auth-wrapper">
         <div className="input-box">
           <label htmlFor="name">Username</label>
           <input
@@ -68,7 +68,7 @@ const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button className="btn" onClick={handleSubmit}>
+        <button className="bttn" onClick={handleSubmit}>
           Sign Up
         </button>
 

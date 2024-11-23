@@ -8,75 +8,23 @@ body {
   min-height: 100vh;
   display: flex;
   font-weight: 400;
+  align-items: center;
+  justify-content: center;
   font-family: "Fira Sans", sans-serif;
   overflow: hidden !important;
 }
-
-h1{
-    font-size: 1.1rem;
-}
-label,
-span {
-  font-weight: 500;
-  font-family: "Fira Sans", sans-serif;
-}
-
-a{
-    text-decoration: none !important;
-    color: #7f7d7d !important;
-}
-a:hover {
-    color: rgba(17, 173, 234, 0.675) !important;
-}
-
-body,
-html,
-.App,
-#root,
 .auth-wrapper {
-  width: 100%;
-  height: 100%;
+    position:relative;
 }
 
-.navbar-light {
-  background-color: #ffffff;
-  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-}
 
-.auth-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: left;
-}
-
-.auth-inner {
-  width: 450px;
-  margin: auto;
-  background: #ffffff;
-  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-  padding: 40px 55px 45px 55px;
-  border-radius: 15px;
-  transition: all 0.3s;
-}
-
-.auth-wrapper .form-control:focus {
-  border-color: #167bff;
-  box-shadow: none;
-}
-
-.auth-wrapper h3 {
-  text-align: center;
-  margin: 0;
-  line-height: 1;
-  padding-bottom: 20px;
-}
-
-.login-app, .register-app, .input-box {
+.login-app .register-app, .input-box {
     flex-direction: column;
     display: flex;
-    margin-bottom: 8px;
+    margin-bottom: 18px;
     outline: none;
+    color: #167bff;
+    width: 320px;
 }
 
 .input-box label{
@@ -95,15 +43,15 @@ input:focus {
 
 .register-app,
 
-.btn {
+.bttn {
     margin-top: 1.5rem;
     padding: 8px 22px;
     border-radius: 8px;
     outline: none;
     border: none;
     width: 100%;
-    background: green !important;
-    color: whitesmoke !important;
+    /* background-color: #1DA1F2; */
+    color: red;
     font-size: 14px !important;
     font-weight: 600 !important;
 }
